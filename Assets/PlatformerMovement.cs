@@ -94,6 +94,7 @@ public class PlatformerMovement : MonoBehaviour
         rb.linearVelocity = velocity;
         
         // Write movement animation code here. (Suggestion: send your current velocity into the Animator for both the x- and y-axis.)
+        animator.SetFloat("speed", Mathf.Abs(velocity.x));
     }
 
     private bool IsGrounded()
